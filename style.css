@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+.heading{
+    font-size: 50px;
+    margin: 30px;
+    padding: 12px;
+    background-color: white;
+    text-decoration: underline;
+    border: 2px dotted black;
+    border-radius: 17px;
+    
+}
+.conatiner{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1px;
+   
+}
+.img{
+    width: 400px;
+    height: 250px;
+    border: 5px solid black;
+}
+img:hover{
+ 
+transform: scale(1.1);
+border-radius: 17px;
+    border: 5px solid red;
+}

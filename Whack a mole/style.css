@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    cursor: none;
+}
+body{
+    background-color: purple;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.heading{
+    font-size: 50px;
+        padding: 12px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: black;
+        background-color: white;
+        text-decoration: underline;
+        border: 2px dotted black;
+        border-radius: 17px;
+}
+.score{
+
+    font-size: 1.3rem;
+    margin: auto;
+    text-align: center;
+}
+.hole{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+.holesCont{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: 1em;
+    justify-items: center;
+}
+.mole{
+    position: absolute;
+    height: 60px;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: appear 0.3s linear;
+    pointer-events: none;
+}
+@keyframes appear {
+    from{
+        bottom: -60px;
+    }
+    to{
+        bottom: 0;
+    }
+}
+.buttons{
+    margin-top: 3em;
+    text-align: center;
+}
+.button{
+    padding: 15px 45px;
+    background-color: inherit;
+    border: 1px solid #fff;
+    color: white;
+    border-radius: 3px;
+    outline: 3px;
+} 
+.stop{
+    display: none;
+}
+.cursor img{
+    position: absolute;
+    height: 125px;
+    z-index: 2;
+    transform: translate(-16px,-20px);
+    pointer-events: none;
+}
+@keyframes hit {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-50deg);
+    }
+}
+.msg{
+    font-size: 100px;
+    text-align: center;
+
+}
