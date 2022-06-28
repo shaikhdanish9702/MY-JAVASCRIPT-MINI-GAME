@@ -27,7 +27,7 @@ options.forEach((option) => {
 
       player.src = "./" + option.innerHTML + "Player.png";
 
-      const choice = ["STONE", "PAPER", "SCISSORS"];
+      const choice = ["stone", "paper", "scissors"];
       let arrayNo = Math.floor(Math.random() * 3);
       let computerChoice = choice[arrayNo];
       computer.src = "./" + computerChoice + "Computer.png";
@@ -35,28 +35,28 @@ options.forEach((option) => {
       let cPoints = parseInt(computerPoints.innerHTML);
       let pPoints = parseInt(playerPoints.innerHTML);
 
-      if (option.innerHTML === "STONE") {
-        if (computerChoice === "PAPER") {
+      if (option.innerHTML === "stone") {
+        if (computerChoice === "paper") {
           computerPoints.innerHTML = cPoints + 1;
 
           matches++
-        } else if (computerChoice === "SCISSORS") {
+        } else if (computerChoice === "scissors") {
           playerPoints.innerHTML = pPoints + 1;
            matches++
         }
-      } else if (option.innerHTML === "PAPER") {
-        if (computerChoice === "SCISSORS") {
+      } else if (option.innerHTML === "paper") {
+        if (computerChoice === "scissors") {
           computerPoints.innerHTML = cPoints + 1;
            matches++
-        } else if (computerChoice === "STONE") {
+        } else if (computerChoice === "stone") {
           playerPoints.innerHTML = pPoints + 1;
            matches++
         }
       } else {
-        if (computerChoice === "STONE") {
+        if (computerChoice === "stone") {
           computerPoints.innerHTML = cPoints + 1;
            matches++
-        } else if (computerChoice === "PAPER") {
+        } else if (computerChoice === "paper") {
           playerPoints.innerHTML = pPoints + 1;
           matches++
 
